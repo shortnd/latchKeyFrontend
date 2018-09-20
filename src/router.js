@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Home from './views/Home.vue';
 import AddKid from './views/AddKid.vue';
 import KidInfo from './views/KidInfo.vue';
+import UpdateKid from './views/UpdateKid.vue';
 
 Vue.use(Router);
 
@@ -30,6 +31,11 @@ export default new Router({
       path: '/kids/:id',
       name: 'KidInfo',
       component: KidInfo,
+    },
+    {
+      path: '/kids/update/:id',
+      name: 'UpdateKid',
+      component: UpdateKid,
     },
   ],
 });

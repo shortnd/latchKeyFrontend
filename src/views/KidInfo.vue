@@ -4,7 +4,7 @@
     <ul>
       <li>Time in: {{ this.kid.time_in }}</li>
     </ul>
-    <router-link :to="`/kids/update/${this.kid._id}`">Update</router-link> |
+    <button @click="updateKid">Update</button> |
     <a href="#" @click.stop="removeKid" class="btn">Remove</a>
   </div>
 </template>
@@ -38,6 +38,12 @@ export default {
         .catch((error) => {
           this.errors.push(error);
         });
+    },
+    updateKid() {
+      this.$router.push({
+        name: 'UpdateKid',
+        params: { id: this.kid._id },
+      });
     },
   },
 };
