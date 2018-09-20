@@ -3,6 +3,8 @@
     <h2>{{ this.kid.name }}</h2>
     <ul>
       <li>Time in: {{ this.kid.time_in }}</li>
+      <li>Time Out: {{ this.kid.time_out }}</li>
+      <li>Checked In: {{ this.kid.checked_in }}</li>
     </ul>
     <button @click="updateKid">Update</button> |
     <a href="#" @click.stop="removeKid" class="btn">Remove</a>
