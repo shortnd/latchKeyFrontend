@@ -6,7 +6,7 @@
     </div>
     <div v-else-if="kids.length > 0 && !loading">
       <div v-for="kid in kids" :key="kid._id">
-        <router-link :to="'/kids/'+kid._id">{{ kid.name }}</router-link>
+        <router-link :to="'/kids/'+kid._id">{{ kid.name }}</router-link> | <span>Time In: {{ kid.time_in }}</span>
       </div>
     </div>
     <div v-else>
